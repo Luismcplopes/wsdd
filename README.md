@@ -26,7 +26,10 @@ It is important that the container is run with the argument --net=host and that 
 
 ### From docker compose
 A docker-compose.yml file could look like the one below.
+
+
 ## Attributions
 **wsdd:** Steffen Christgau (https://github.com/christgau/wsdd)
 #### https://github.com/hihp/wsdd
+#### https://github.com/JonasPed/wsdd-docker
 #### https://hub.docker.com/r/kosdk/wsdd
