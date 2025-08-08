@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  wsdd:
+    image: hihp/wsdd
+    container_name: wsdd
+    network_mode: host
+    environment:
+      - WORKGROUP: WORKGROUP_NAME
+      - LOCALSUBNET: "192\\.168\\.1"
+      - HOSTNAME: NETBIOS_NAME
+      - 'HOSTNAME=$HOSTNAME'
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "/usr/src/app/healthcheck"]
+      interval: 1m
+      timeout: 3s
+      retries: 3
+      start_period: 10s
